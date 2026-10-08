@@ -18,6 +18,7 @@ tools:
 network:
   allowed:
     - github
+    - github.blog
     - awesome-copilot.github.com
 safe-outputs:
   create-pull-request:
