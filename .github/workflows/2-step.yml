@@ -118,6 +118,8 @@ jobs:
         run: |
           grep -qi "edit:" .github/workflows/update-github-info.md
           grep -qi "web-fetch:" .github/workflows/update-github-info.md
+          grep -q 'calling the `web_fetch` tool directly' .github/workflows/update-github-info.md
+          grep -q 'Do not use the shell, `curl`, `wget`, scripts' .github/workflows/update-github-info.md
 
       - name: Check workflow supports manual runs
         id: check-workflow-dispatch

@@ -29,11 +29,15 @@ safe-outputs:
 
 Read `notes/mona-notes.md` and the existing `site/content/github-info.md` before making any changes.
 
-Use the web-fetch tool to read:
+Fetch each source by calling the `web_fetch` tool directly, once per URL:
 
 - https://github.blog/latest/
 - https://github.blog/changelog/
 - https://awesome-copilot.github.com/workflows/
+
+Do not use the shell, `curl`, `wget`, scripts, or other shell commands for network access.
+Shell commands may require interactive approval, which is unavailable in this workflow.
+If `web_fetch` is unavailable or returns an error, report the workflow as incomplete and identify the affected source; do not substitute shell-based fetching.
 
 Select only recent, relevant updates or useful workflows that provide practical GitHub guidance for Mona's readers. Keep the page concise and consistent with Mona's editorial notes. Ground every added claim in the fetched sources and include a direct source link for anything derived from the GitHub Blog, Changelog, or Awesome Copilot workflows. Preserve useful existing content and edit only `site/content/github-info.md`.
 

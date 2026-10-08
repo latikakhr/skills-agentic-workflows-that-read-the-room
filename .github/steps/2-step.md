@@ -58,8 +58,10 @@ Continue working in VS Code. If you closed your browser editor, reopen your deve
    >   propose changes without writing directly to main.
    > - Tell the agent to:
    >   - read notes/mona-notes.md,
-   >   - web fetch https://github.blog/latest/
-   >   - web fetch https://github.blog/changelog/
+   >   - call the `web_fetch` tool directly, once per URL, for
+   >     https://github.blog/latest/ and https://github.blog/changelog/
+   >   - do not use the shell, curl, wget, or scripts for network access because
+   >     shell approval is unavailable in the non-interactive workflow
    > - update site/content/github-info.md, and open
    > - a pull request for Mona to review.
    > - Check the syntax of the configuration for the agentic workflow is valid
